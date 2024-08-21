@@ -1,0 +1,24 @@
+/* AnimatedCircular.css */
+.animated-circular {
+  display: block;
+  margin: 0 auto;
+}
+
+.background-circle {
+  opacity: 0.3;
+}
+
+.loading-circle {
+  animation: rotate 2s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
