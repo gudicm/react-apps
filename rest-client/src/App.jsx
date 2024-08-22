@@ -1,14 +1,13 @@
 import { useState } from "react";
 
 import "./App.css";
+import Circular from "./components/common/circular";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
-import { httpMethods } from "./constants/general";
-import { isValidURL, isStatusOk } from "./utils/validate";
 import { errMsgs } from "./constants/errors";
-
+import { httpMethods } from "./constants/general";
 import { execHttpReq } from "./services/api-service";
-import Circular from "./components/common/circular";
+import { isValidURL, isStatusOk } from "./utils/validate";
 
 function App() {
   // state
@@ -92,7 +91,7 @@ function App() {
         <div className="container">
           <h2>Configure a call to endpoint:</h2>
           <p>
-            <label>Method:</label>
+            <label htmlFor="Method">Method:</label>
             <select onChange={handleSelectChange}>
               {httpMethods.map((item, index) => (
                 <option key={index} value={item}>
@@ -117,7 +116,7 @@ function App() {
 
           {!loading && formState.request !== null && (
             <p>
-              <label>Request:</label>
+              <label htmlFor="Request">Request:</label>
               <textarea readOnly value={formState.request} rows="10" />
             </p>
           )}
@@ -125,7 +124,7 @@ function App() {
             <>
               <p className="out time">{`Exec time:  ${reqTime} ms`}</p>
               <p>
-                <label>Response:</label>
+                <label htmlFor="Response">Response:</label>
                 <textarea
                   className={
                     !isStatusOk(JSON.parse(formState.response)?.status) &&
@@ -140,7 +139,7 @@ function App() {
           )}
           {!loading && formState.data !== null && (
             <p>
-              <label>Data:</label>
+              <label htmlFor="Request">Data:</label>
               <textarea readOnly value={formState.data} rows="10" />
             </p>
           )}
