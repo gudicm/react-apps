@@ -1,0 +1,137 @@
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+header,
+footer {
+  text-align: center;
+  /* padding: 1em 0; */
+  position: fixed;
+  width: 100%;
+  left: 0;
+  border: 1px solid #ccc;
+  /* border: 0px none; */
+  background-color: whitesmoke;
+}
+
+header {
+  top: 0;
+  z-index: 10;
+  height: 20%;
+}
+
+footer {
+  /* height: 21vh; */
+  bottom: 0;
+}
+
+.content {
+  /* padding: 5em 1em; */
+  /* Make space for header and footer */
+  overflow-y: auto;
+  height: calc(100vh - 4em);
+  /* 4em for header and footer height */
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10em;
+}
+
+.container p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+  /* Add space between items */
+  flex-wrap: wrap;
+  /* Ensure responsiveness */
+  /* background-color: rgb(196, 189, 189); */
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.container p span {
+  margin-right: 0.5em;
+}
+
+.container p select,
+.container p button,
+.container p input {
+  padding: 0.5em;
+  font-size: 1em;
+  /* height: 2.5em; */
+  /* Ensure same height */
+}
+
+.container p input {
+  flex: 1;
+  /* Ensure input takes available space */
+  max-width: 300px;
+}
+
+.container p button {
+  flex-shrink: 0;
+  /* Prevent button from shrinking */
+}
+
+.out {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.error {
+  font-weight: bold;
+  color: red;
+}
+
+.time {
+  font-weight: bold;
+  color: blue;
+}
+
+.content .container p label {
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+p textarea {
+  width: 100%;
+  padding: 0.4em;
+  font-size: 0.75em;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  /* Disable manual resizing */
+  min-height: 50px;
+  /* Set a minimum height */
+  max-height: 500px;
+  /* Set a maximum height if needed */
+}
+
+div.content div.container p button {
+  border: 2px solid black;
+}
+
+div.content div.container p button:hover {
+  background-color: rgb(53, 190, 53);
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-top: 9em;
+  }
+}
