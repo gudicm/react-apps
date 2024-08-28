@@ -1,6 +1,6 @@
 ## About The App
 
-React + Javascript + Vite.  
+React + TypeScript + Vite.  
 Rest client responsive app to perform basic REST requests and to interpret responses. 
 
 ### Notable Features:
