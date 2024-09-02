@@ -1,0 +1,4 @@
+.instructional-copyright {
+  margin-top: auto;
+  margin-bottom: calc(16px * var(--scale));
+}

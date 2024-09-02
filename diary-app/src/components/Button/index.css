@@ -1,0 +1,33 @@
+.button-container button.accent {
+  border: solid 1px #6445d7;
+  background-color: #6445d7;
+  color: #fff;
+}
+
+.navigation-buttons button, .button-container button {
+  width: 40%;
+  padding: 0.75rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #d1d5db;
+  background-color: #fff;
+  color: #374151;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navigation-buttons button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+@media (max-width: 359px) {
+  .navigation-buttons button {
+    width: 100%;
+  }
+}

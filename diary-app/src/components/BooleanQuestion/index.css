@@ -1,0 +1,43 @@
+.booleanQuestion {
+  border-top: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.booleanQuestion:last-of-type {
+  border-bottom: 1px solid lightgray;
+}
+
+.booleanQuestion .right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 256px;
+  background-color: #f9fafb;
+}
+
+.booleanQuestion .left {
+  padding-right: 20px;
+  width: 75%;
+}
+
+.booleanQuestion .right button {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  height: 50px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.booleanQuestion .right button.selected {
+  background-color: #6445d7;
+  border-color: #533ab3;
+  color: white;
+}
+
+.booleanQuestion.disabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,48 @@
+{
+  "name": "diary-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "homepage": "https://gudicm.github.io/react-apps",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "gh-pages -d dist -b gh-pages -p https://gudicm.github.io/react-apps",
+    "clean": "rm -rf clean",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext js,jsx --fix --report-unused-disable-directives --max-warnings 0",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "prettier:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+  },
+  "dependencies": {
+    "html-react-parser": "^5.1.13",
+    "prop-types": "^15.8.1",
+    "react": "16.8.0 || >=17.x",
+    "react-datepicker": "^4.8.0",
+    "react-dom": "16.8.0 || >=17.x",
+    "react-dropdown": "^1.11.0",
+    "react-i18next": "^12.0.0",
+    "temporal-luxon": "^4.2.1"
+  },
+  "peerDependencies": {
+    "react": "16.8.0 || >=17.x",
+    "react-dom": "16.8.0 || >=17.x"
+  },
+  "devDependencies": {
+    "react-dropdown": "^1.11.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "gh-pages": "^6.1.1",
+    "prettier": "^3.3.2",
+    "vite": "^5.3.1"
+  }
+}

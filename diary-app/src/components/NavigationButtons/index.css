@@ -1,0 +1,77 @@
+.navigation-buttons :not(.accent) {
+  margin-right: 8px;
+}
+
+.navigation-buttons .accent {
+  border: solid 1px #6445d7;
+  background-color: #6445d7;
+  color: #fff;
+}
+
+.navigation-buttons,
+.button-container {
+  text-align: center;
+  font-size: 0;
+  border-top: 1px solid #c8c8c8;
+  padding: 16px;
+  min-height: 5vh; /* added because of Safari desktop-only bug: if user quickly zooms in, button-container will sometimes dissapear */
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation-buttons button {
+    width: calc(50% - 4px);
+  }
+
+  .navigation-buttons button:nth-of-type(2) {
+    width: calc(50% - 4px);
+  }
+
+  .navigation-buttons button:only-of-type,
+  .button-container button:only-of-type {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navigation-buttons,
+  .button-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .navigation-buttons button {
+    width: 384px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .navigation-buttons,
+  .button-container {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .navigation-buttons,
+  .button-container {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  .navigation-buttons,
+  .button-container {
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
+}
+
+/* RTL style */
+body[dir='rtl'] .navigation-buttons :not(.accent) {
+  margin-right: unset;
+  margin-left: 8px;
+}

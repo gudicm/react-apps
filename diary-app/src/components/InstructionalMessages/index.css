@@ -1,0 +1,11 @@
+.no-scroll-container h1 {
+  font-size: calc(1.875rem * var(--scale));
+  margin: calc(2rem * var(--scale)) 0;
+}
+
+.copyright p,
+.instructionalMessages p {
+  font-size: calc(100% * var(--scale));
+  margin-top: calc(16px * var(--scale));
+  margin-bottom: calc(16px * var(--scale));
+}

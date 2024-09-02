@@ -1,0 +1,26 @@
+.modal {
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 50px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 7px #646464;
+  width: 50%;
+  z-index: 10;
+}
+
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  opacity: 0.4;
+}

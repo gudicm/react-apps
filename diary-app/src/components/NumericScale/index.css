@@ -1,0 +1,139 @@
+.numeric-scale {
+  font-size: calc(16px * var(--scale));
+}
+
+.scale-options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+
+.ns-option {
+  padding: 0;
+  border-radius: 6px;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  line-height: 48px;
+  border: solid 1px #9ca3af;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ns-option.selected {
+  border: solid 1px #533ab3;
+  background-color: #6445d7;
+  color: #fff;
+}
+
+.options-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(
+    calc(100% / var(--nrsElements)) - calc(var(--nrsElements) / calc(var(--nrsElements) + 1) * 2px)
+  );
+}
+
+.options-group:last-child {
+  align-items: flex-end;
+}
+
+.options-group:not(:last-of-type) {
+  margin-right: 2px;
+}
+
+.nrs-children {
+  margin-bottom: calc(8px * var(--scale));
+}
+
+.nrs-anchors-hidden,
+.nrs-anchors-labels-hidden {
+  visibility: hidden;
+}
+
+.nrs-arrow {
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent #000000 transparent;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.hasAnchor.showAnchorArrows:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid black;
+  position: absolute;
+  top: 60px;
+}
+
+.hasAnchor.showAnchorArrows.firstAnchor:after {
+  left: 0;
+}
+
+.hasAnchor.showAnchorArrows.lastAnchor:after {
+  right: 0;
+}
+
+.options-group .anchor {
+  text-align: center;
+  margin-top: 25px;
+  width: calc(100% / var(--nrsElements) * calc(var(--nrsElements) / var(--anchorsLength) * 10));
+}
+
+.options-group:first-of-type .anchor {
+  text-align: left;
+}
+
+.options-group:last-of-type .anchor {
+  text-align: right;
+}
+
+.options-group:not(:first-of-type):not(:last-of-type) {
+  align-items: center;
+}
+
+.anchors-above .options-group {
+  flex-direction: column-reverse;
+}
+
+.anchors-above .options-group .anchor {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.anchors-above .hasAnchor.showAnchorArrows:after {
+  transform: rotate(180deg);
+  top: unset;
+  bottom: 60px;
+}
+
+.numeric-scale.rtl .hasAnchor.firstAnchor.showAnchorArrows:after {
+  right: 0;
+}
+
+.numeric-scale.rtl .hasAnchor.lastAnchor.showAnchorArrows:after {
+  left: 0;
+  right: auto;
+}
+
+.numeric-scale.rtl .options-group:not(:last-of-type) {
+  margin-right: 0;
+  margin-left: 2px;
+}
+
+.numeric-scale.rtl .options-group:last-of-type .anchor {
+  text-align: left;
+}
+
+.numeric-scale.rtl .options-group:first-of-type .anchor {
+  text-align: right;
+}

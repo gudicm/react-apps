@@ -1,0 +1,64 @@
+.stem, .question {
+  margin-block: 1em;
+}
+
+.value-picker-dropdown {
+  display: inline-flex;
+  flex-direction: row;
+  position: relative;
+  align-items: baseline;
+  width: 30%;
+}
+
+.value-picker-header {
+  width: 70%;
+}
+
+.value-picker-control {
+  padding: 8px;
+}
+
+.value-picker-control, .value-picker-menu {
+  border-radius: 4px;
+}
+
+.value-picker-menu .is-selected {
+  background-color: #6445d7;
+  color: #fff;
+}
+
+.value-picker-menu .Dropdown-option:hover {
+  background-color: #cfc6f2;
+}
+
+.value-picker-unit {
+  margin-left: 6px;
+}
+
+.value-picker-arrow {
+  top: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .value-picker-dropdown {
+    width: 70%;
+  }
+}
+
+.inline .value-picker-dropdown {
+  padding: 5px 0;
+}
+
+.inline .value-picker-menu {
+  line-height: 1;
+}
+
+body[dir='rtl'] .value-picker-arrow {
+  left: 10px;
+  right: unset;
+}
+
+body[dir='rtl'] .value-picker-unit {
+  margin-right: 6px;
+  margin-left: unset;
+}
