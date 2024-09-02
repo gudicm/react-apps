@@ -7,21 +7,12 @@ type CircularProps = {
   strokeWidth?: number;
 };
 
-const Circular: React.FC<CircularProps> = ({
-  size = 100,
-  color = 'grey',
-  strokeWidth = 10,
-}) => {
+const Circular: React.FC<CircularProps> = ({ size = 100, color = 'grey', strokeWidth = 10 }) => {
   const radius: number = (size - strokeWidth) / 2;
   const circumference: number = 2 * Math.PI * radius;
 
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox={`0 0 ${size} ${size}`}
-      className="animated-circular"
-    >
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="animated-circular">
       <circle
         cx={size / 2}
         cy={size / 2}

@@ -69,3 +69,4 @@ module.exports = {
     'react/prop-types': 'off', // Disable prop-types as we're using TypeScript
   },
 };
+1

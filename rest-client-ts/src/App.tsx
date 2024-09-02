@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 
 import './App.css';
+import Circular from './components/common/circular';
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
-
-import { httpMethods } from './constants/general';
-
-import { execHttpReq } from './services/api-service';
-import Circular from './components/common/circular';
 import { errMsgs } from './constants/errors';
+import { httpMethods } from './constants/general';
+import { execHttpReq } from './services/api-service';
 import { isValidURL } from './utils/validate';
 
 type FormState = {
@@ -74,7 +72,7 @@ const App: React.FC = () => {
         formState.params,
         formState.headers,
         formState.body,
-        formState.config,
+        formState.config
       );
       setReqTime(execTime);
 
@@ -82,10 +80,8 @@ const App: React.FC = () => {
         delete response.data;
       }
 
-      const req: unknown =
-        request === null ? '' : JSON.stringify(request, null, 2);
-      const res: unknown =
-        response === null ? '' : JSON.stringify(response, null, 2);
+      const req: unknown = request === null ? '' : JSON.stringify(request, null, 2);
+      const res: unknown = response === null ? '' : JSON.stringify(response, null, 2);
       const _data: unknown = data === null ? '' : JSON.stringify(data, null, 2);
       setFormState({
         ...formState,
@@ -121,11 +117,7 @@ const App: React.FC = () => {
             </select>
           </p>
           <p>
-            <input
-              type="text"
-              placeholder="Enter a url:"
-              onChange={handleInputChange}
-            />
+            <input type="text" placeholder="Enter a url:" onChange={handleInputChange} />
             <button type="button" onClick={handleButtonClick}>
               Send
             </button>
@@ -146,11 +138,7 @@ const App: React.FC = () => {
               <p>
                 <label>Response:</label>
                 <textarea
-                  className={
-                    isStatusOk(JSON.parse(formState.response)?.status)
-                      ? ''
-                      : 'error'
-                  }
+                  className={isStatusOk(JSON.parse(formState.response)?.status) ? '' : 'error'}
                   readOnly
                   value={formState.response}
                   rows={10}

@@ -1,4 +1,5 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios, { AxiosRequestConfig, AxiosResponse, isAxiosError } from 'axios';
+
 import { httpMethods } from '../constants/general';
 
 type HttpMethod = (typeof httpMethods)[number];
@@ -16,11 +17,9 @@ const execHttpReq = async <T>(
   params: Record<string, unknown> = {},
   headers: Record<string, string> = {},
   body: Record<string, unknown> = {},
-  config: AxiosRequestConfig = {},
+  config: AxiosRequestConfig = {}
 ): Promise<HttpResponse<T>> => {
-  headers = headers['Content-Type']
-    ? headers
-    : { ...headers, 'Content-Type': 'application/json' };
+  headers = headers['Content-Type'] ? headers : { ...headers, 'Content-Type': 'application/json' };
 
   const startTime = Date.now();
 
@@ -51,7 +50,7 @@ const execHttpReq = async <T>(
     const endTime = Date.now();
     const execTime = endTime - startTime;
 
-    if (axios.isAxiosError(error) && error.response) {
+    if (isAxiosError(error) && error.response) {
       return {
         request: error.config as AxiosRequestConfig,
         response: error.response,
@@ -59,7 +58,7 @@ const execHttpReq = async <T>(
         data: error.response.data as T,
         execTime,
       };
-    } else if (axios.isAxiosError(error) && error.request) {
+    } else if (isAxiosError(error) && error.request) {
       return {
         request: error.config as AxiosRequestConfig,
         response: null,

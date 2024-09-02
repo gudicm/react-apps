@@ -9,15 +9,13 @@ const isValidURL = (url: string): boolean => {
       '(\\/[-a-z\\d%_.~+]*)*' + // path
       '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
       '(\\#[-a-z\\d_]*)?$',
-    'i', // case-insensitive flag
+    'i' // case-insensitive flag
   );
   return regex.test(url);
 };
 
 const isStatusOk = (status: number) => {
-  const res =
-    <number>statusOkRange.MIN <= <number>status &&
-    <number>status <= <number>statusOkRange.MAX;
+  const res = <number>statusOkRange.MIN <= <number>status && <number>status <= <number>statusOkRange.MAX;
   console.log('status: ', status, res);
   return res;
 };
