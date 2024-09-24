@@ -1,13 +1,15 @@
 import React from 'react';
 
+import './index.css';
+
 interface ButtonProps {
   text?: string;
   classname?: string;
   onClick?: () => void;
 }
 const Button: React.FC<ButtonProps> = ({
-  text = 'Click me!',
-  classname = '',
+  text = 'Yo!',
+  classname = 'button',
   onClick = () => {
     console.log('Button clicked!');
   },
