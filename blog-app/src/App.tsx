@@ -7,16 +7,18 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean | null>(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 500);
   }, []);
 
   return loading ? (
     <Circular
       size={50}
       color="black"
-      strokeWidth={8} />
+      strokeWidth={8}>
+        <h2>loading ...</h2>
+      </Circular>
   ) : (
     <>
       <header>
