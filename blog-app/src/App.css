@@ -1,8 +1,14 @@
+:root {
+  --primary-color: #3f8fc4be;
+  --secondary-color: #25aa5c86;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -15,22 +21,21 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #333;
+  background-color: var(--primary-color);
   color: white;
   padding: 10px 0;
-  text-align: left;
 }
 
 /* Hamburger Menu */
 .menu-icon {
-  display: none;
+  display: none; /* Hide by default */
   cursor: pointer;
   font-size: 24px;
   padding: 10px;
 }
 
 nav {
-  display: flex;
+  display: flex; /* Default display for larger screens */
   justify-content: center;
 }
 
@@ -44,29 +49,37 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Mobile Navigation */
+/* Add your existing styles above */
+
 .nav-links {
-  display: flex;
+  display: block; /* Hide by default */
 }
 
-.nav-links.mobile {
-  display: none;
-  flex-direction: column;
-  text-align: left;
-  background-color: #333;
-  position: absolute;
-  top: 60px;
-  width: 100%;
-  padding: 10px 0;
+.menu-icon {
+  cursor: pointer;
+  font-size: 24px;
 }
 
-.nav-links.mobile a {
-  padding: 10px;
-  border-bottom: 1px solid #444;
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .nav-links {
+    display: block; /* Ensure it's hidden by default */
+  }
+
+  .nav-links.open {
+    display: block; /* Display the nav links when menu is open */
+  }
+
+  .nav-links.open a {
+    display: block; /* Stack links vertically */
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+  }
 }
 
 footer {
-  background-color: #333;
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -81,14 +94,18 @@ footer {
   padding-bottom: 80px; /* Ensures content isn't under the footer */
 }
 
-.latest-post, .popular-posts, .blog-list {
+.latest-post,
+.popular-posts,
+.blog-list {
   background-color: white;
   margin: 20px 0;
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.latest-post h2, .popular-posts h2, .blog-list h2 {
+.latest-post h2,
+.popular-posts h2,
+.blog-list h2 {
   color: #333;
   margin-bottom: 15px;
 }
@@ -113,18 +130,18 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
   nav {
-      display: none;
+    display: none; /* Hide nav by default on mobile */
   }
 
   .menu-icon {
-      display: block;
+    display: block; /* Show menu icon on mobile */
   }
 
-  .nav-links.mobile {
-      display: none;
+  .nav-links {
+    display: none; /* Hide nav-links by default on mobile */
   }
 
   .nav-links.mobile.open {
-      display: flex;
+    display: flex; /* Show nav-links when open on mobile */
   }
 }
