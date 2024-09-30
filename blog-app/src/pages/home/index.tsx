@@ -26,8 +26,7 @@ const HomePage: React.FC = () => {
 
         <section className="popular-posts">
           <h2>Popular Posts</h2>
-          {topBlogs?.map((blog) => 
-          <Post key={blog.id} item={blog} />)}
+          {topBlogs?.map((blog) => <Post key={blog.id} item={blog} />)}
         </section>
 
         <section className="blog-list">
