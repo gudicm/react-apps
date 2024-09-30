@@ -1,6 +1,6 @@
-import AboutPage from '../pages/about';
-import HomePage from '../pages/home';
-import PostPage from '../pages/posts';
+import AboutPage from '../pages/About';
+import HomePage from '../pages/Home';
+import PostPage from '../pages/Posts';
 import { Route } from '../types/constants/routes';
 
 export const routes: Route[] = [

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Post from '../../features/post';
+import Post from '../../features/Post';
 import { getAllBlogs } from '../../services/blog-service';
 import { Blog } from '../../types/services/blogs';
 import { getMaxValue } from '../../utils/collections';

@@ -4,8 +4,8 @@ import './App.css';
 
 import Circular from './components/Circular';
 import { routes } from './constants/routes';
-import Footer from './features/footer';
-import Header from './features/header';
+import Footer from './features/Footer';
+import Header from './features/Header';
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);

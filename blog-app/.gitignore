@@ -33,3 +33,6 @@ dist-ssr
 
 # html
 /html
+
+# bundle report
+stats.html
