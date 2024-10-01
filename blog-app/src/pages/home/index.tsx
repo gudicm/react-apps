@@ -2,13 +2,14 @@ import React from 'react';
 
 import Post from '../../features/Post';
 import { getAllBlogs } from '../../services/blog-service';
-import { Blog } from '../../types/services/blogs';
+import { BlogShort } from '../../types/services/blogs';
 import { getMaxValue } from '../../utils/collections';
 
 const HomePage: React.FC = () => {
-  const blogs: Array<Blog> = getAllBlogs();
+  const blogs: Array<BlogShort> = getAllBlogs();
+  const latestBlog: BlogShort = blogs[0];
   const maxScore = getMaxValue(blogs, 'score');
-  const topBlogs: Array<Blog> = blogs.filter((blog) => blog.score === maxScore);
+  const topBlogs: Array<BlogShort> = blogs.filter((blog) => blog.score === maxScore);
 
   return (
     <>
@@ -16,11 +17,12 @@ const HomePage: React.FC = () => {
         <section className="latest-post">
           <h2>Latest Post</h2>
           <article>
-            <h3>Title of the Latest Post</h3>
+            <Post key={latestBlog.id} item={latestBlog} />
+            {/* <h3>Title of the Latest Post</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nibh eget mi sodales fermentum at et
               sem.
-            </p>
+            </p> */}
           </article>
         </section>
 

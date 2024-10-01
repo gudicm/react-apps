@@ -22,11 +22,13 @@ const Header: React.FC<HeaderProps> = ({ children = null }) => {
         <FaList />
       </span>
       <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-        {routes.map((route) => (
-          <Link key={route.path} to={route.path}>
-            {route.label}
-          </Link>
-        ))}
+        {routes
+          .filter((r) => r.isHeader === true)
+          .map((route) => (
+            <Link key={route.path} to={route.path}>
+              {route.label}
+            </Link>
+          ))}
       </nav>
       {children}
     </header>

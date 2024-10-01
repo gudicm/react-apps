@@ -1,6 +1,6 @@
 :root {
   --primary-color: #3f8fc4be;
-  --secondary-color: #25aa5c86;
+  --secondary-color: #3177a766;
 }
 
 * {
@@ -96,7 +96,9 @@ footer {
 
 .latest-post,
 .popular-posts,
-.blog-list {
+.blog-list,
+.blog-content,
+.about {
   background-color: white;
   margin: 20px 0;
   padding: 20px;
@@ -106,8 +108,16 @@ footer {
 .latest-post h2,
 .popular-posts h2,
 .blog-list h2 {
-  color: #333;
+  color: var(--primary-color);
   margin-bottom: 15px;
+}
+
+.latest-post h3,
+.popular-posts h3,
+.blog-post h3,
+.blog-content h3,
+.about h3 {
+  color: var(--secondary-color);
 }
 
 .blog-list .blog-post {
@@ -119,7 +129,7 @@ footer {
 }
 
 .blog-list .blog-post h3 {
-  color: #0073e6;
+  color: var(--secondary-color);
   margin-bottom: 10px;
 }
 

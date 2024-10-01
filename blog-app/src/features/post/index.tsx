@@ -1,18 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Blog } from '../../types/services/blogs';
+import { BlogShort } from '../../types/services/blogs';
 
 type BlogItemProps = {
-  item: Blog;
+  item: BlogShort;
   children?: React.ReactNode;
 };
 const Post: React.FC<BlogItemProps> = ({ item: blog, children = null }) => {
   return (
-    <div className="blog-post" key={blog.id}>
-      <h3>{blog.title}</h3>
+    <section className="blog-post" key={blog.id}>
+      <h3>
+        <Link to={`/posts/${blog.id}`}>{blog.title}</Link>
+      </h3>
       <p>{blog.description}</p>
       {children}
-    </div>
+    </section>
   );
 };
 

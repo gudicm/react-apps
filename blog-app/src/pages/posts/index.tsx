@@ -7,7 +7,7 @@ type PostProps = {
   children?: React.ReactNode;
 };
 
-const PostPage: React.FC<PostProps> = ({ children = null }) => {
+const PostsPage: React.FC<PostProps> = ({ children = null }) => {
   const blogs = getAllBlogs(5);
 
   return blogs.length === 0 ? null : (
@@ -22,4 +22,4 @@ const PostPage: React.FC<PostProps> = ({ children = null }) => {
   );
 };
 
-export default PostPage;
+export default PostsPage;
