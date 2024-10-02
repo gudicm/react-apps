@@ -1,0 +1,16 @@
+.error-container {
+    padding: 20px;
+    background-color: lightcoral;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .error-container h2 {
+    margin-top: 0;
+  }
+  
+  .error-container p {
+    margin-bottom: 0;
+  }
+  

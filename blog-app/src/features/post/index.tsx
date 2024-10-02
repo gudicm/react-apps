@@ -4,16 +4,17 @@ import { Link } from 'react-router-dom';
 import { BlogShort } from '../../types/services/blogs';
 
 type BlogItemProps = {
-  item: BlogShort;
+  item?: BlogShort | null;
   children?: React.ReactNode;
 };
-const Post: React.FC<BlogItemProps> = ({ item: blog, children = null }) => {
-  return (
-    <section className="blog-post" key={blog.id}>
+const Post: React.FC<BlogItemProps> = ({ 
+  item: blog = null, children = null }) => {
+  return blog === null ? null : (
+    <section className="blog-post" key={blog?.id}>
       <h3>
-        <Link to={`/posts/${blog.id}`}>{blog.title}</Link>
+        <Link to={`/posts/${blog?.id}`}>{blog?.title}</Link>
       </h3>
-      <p>{blog.description}</p>
+      <p>{blog?.description}</p>
       {children}
     </section>
   );

@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #3f8fc4be;
+  --primary-color: #73b3def3;
   --secondary-color: #3177a766;
 }
 
@@ -137,6 +137,12 @@ footer {
   color: #666;
 }
 
+.error-container {
+  padding: '40px'; 
+  background-color: 'lightcoral'; 
+  color: 'white';
+ }
+ 
 /* Responsive Styles */
 @media (max-width: 768px) {
   nav {
