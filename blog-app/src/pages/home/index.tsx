@@ -75,7 +75,7 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default function HomePageWithErrorBoundary() {
+const HomePageWithErrorBoundary =() => {
   // Wrapping HomePage in ErrorBoundary
   return (
     <ErrorBoundary>
@@ -83,3 +83,5 @@ export default function HomePageWithErrorBoundary() {
     </ErrorBoundary>
   );
 }
+
+export default HomePageWithErrorBoundary;

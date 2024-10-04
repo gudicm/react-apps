@@ -7,14 +7,6 @@ import Footer from './features/Footer';
 import Header from './features/Header';
 
 const App: React.FC = () => {
-  
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 100);
-
-  //   return () => clearTimeout(timer); // Clear the timeout when the component is unmounted
-  // }, []);
 
   return (
     <Router>
