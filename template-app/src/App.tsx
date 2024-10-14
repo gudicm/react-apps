@@ -1,25 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import React, { Suspense } from 'react';
 
-import Button from './components/Button';
+import './App.css';
 import Circular from './components/Circular';
+import ErrorBoundary from './components/Error/error';
+ // Import the ErrorBoundary
+
+// Lazily load Button component
+const Button = React.lazy(() => import('./components/Button'));
 
 const App: React.FC = () => {
-  const [loading, setLoading] = useState<boolean | null>(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  return loading ? (
-    <Circular size={100} color="grey" strokeWidth={10} />
-  ) : (
-    <>
-      <h1>Hello World!</h1>
-      <Button />
-    </>
+  
+  
+  return (
+    <ErrorBoundary>
+      {/* Wrap Suspense with ErrorBoundary to handle errors in lazy-loaded components */}
+      <Suspense fallback={<Circular size={50} color="blue" strokeWidth={5} />}>
+        <>
+          <h1>Hello World!</h1>
+          <Button />
+        </>
+      </Suspense>
+    </ErrorBoundary>
   );
 };
 
