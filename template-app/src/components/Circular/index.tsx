@@ -1,13 +1,13 @@
 import React from 'react';
 import './index.css'; // CSS for animation
 
-type CircularProps = {
+export type CircularProps = {
     size?: number;
     color?: string;
     strokeWidth?: number;
 };
 
-const Circular: React.FC<CircularProps> = ({
+export const Circular: React.FC<CircularProps> = ({
     size = 100,
     color = 'grey',
     strokeWidth = 10
@@ -43,4 +43,4 @@ const Circular: React.FC<CircularProps> = ({
     );
 };
 
-export default Circular;
+

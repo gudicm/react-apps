@@ -45,3 +45,10 @@ CustomClass.args = {
     text: 'Styled Button',
     classname: 'button custom',
 };
+
+export const WithOnclickHandler = Template.bind({});
+WithOnclickHandler.args = {
+  text: 'Click me',
+  classname: 'custom-button',
+  onClick: () => alert('Custom class button clicked!'),
+};
