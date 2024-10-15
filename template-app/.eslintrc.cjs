@@ -12,7 +12,8 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:import/typescript', // Import rules for TypeScript
+    'plugin:react/jsx-runtime',
+    'plugin:import/typescript', 
     'prettier', // Prettier integration
   ],
   settings: {
@@ -25,11 +26,12 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true, // Enable JSX
+      jsx: true, 
     },
   },
   plugins: ['react', 'react-refresh', '@typescript-eslint', 'import'],
   rules: {
+    'no-unused-vars': ['error', { 'varsIgnorePattern': '^React$' }],
     // TypeScript-specific rules
     '@typescript-eslint/no-unused-vars': 'warn', // Warn about unused variables
     '@typescript-eslint/no-explicit-any': 'off', // Allow use of `any`, adjust as needed

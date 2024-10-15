@@ -2,12 +2,12 @@ import React from 'react';
 
 import './index.css';
 
-interface ButtonProps {
+export interface ButtonProps {
   text?: string;
   classname?: string;
   onClick?: () => void;
 }
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   text = 'Yo!',
   classname = 'button',
   onClick = () => {
@@ -21,4 +21,3 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
