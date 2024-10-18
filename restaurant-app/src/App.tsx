@@ -28,6 +28,7 @@ const App: React.FC = () => {
           <Header />
 
           <Main />
+          
           <Footer />
         </>
       </Suspense>
