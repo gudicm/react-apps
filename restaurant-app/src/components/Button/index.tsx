@@ -4,12 +4,12 @@ import './index.css';
 
 interface ButtonProps {
   text?: string;
-  classname?: string;
+  className?: string;
   onClick?: () => void;
 }
 const Button: React.FC<ButtonProps> = ({
   text = 'Yo!',
-  classname = 'button',
+  className: classname = 'button',
   onClick = () => {
     console.log('Button clicked!');
   },
