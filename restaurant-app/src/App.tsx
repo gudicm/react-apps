@@ -5,10 +5,11 @@ import './index.css'
 import './App.css';
 import Circular from './components/Circular';
 import ErrorBoundary from './components/Error/error';
+import About from './features/AboutUs';
 import Footer from './features/Footer';
 import Header from './features/Header';
 import Main from './features/Main';
-
+import Shop from './features/Shop';
 
 
 
@@ -28,7 +29,11 @@ const App: React.FC = () => {
           <Header />
 
           <Main />
-          
+
+          <About />
+
+          <Shop />
+
           <Footer />
         </>
       </Suspense>

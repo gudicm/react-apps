@@ -6,6 +6,7 @@ interface HeroImageProps {
     height: string;
     alt?: string;
     className?: string;
+    lazyLoading?: boolean;
 }
 
 const Image: React.FC<HeroImageProps> = ({
@@ -13,7 +14,8 @@ const Image: React.FC<HeroImageProps> = ({
     width,
     height,
     alt,
-    className
+    className,
+    lazyLoading = false,
 }) => {
     return (
         <img
@@ -21,8 +23,8 @@ const Image: React.FC<HeroImageProps> = ({
             width={width}
             height={height}
             alt={alt}
-            aria-hidden="true"
             className={className}
+            loading={lazyLoading ? 'lazy' : 'eager'}
         />
     );
 };

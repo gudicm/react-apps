@@ -11,7 +11,7 @@ const Button: React.FC<ButtonProps> = ({
   text = 'Yo!',
   className: classname = 'button',
   onClick = () => {
-    console.log('Button clicked!');
+    alert('Button clicked!');
   },
 }) => {
   return (

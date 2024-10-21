@@ -1,6 +1,5 @@
 import React from "react";
 
-import FacebookLogo from "../Social/FacebookLogo";
 
 
 const Footer: React.FC = () => {
