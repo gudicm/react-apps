@@ -1,25 +1,21 @@
-import React from "react";
-
-
+import React from 'react';
 
 const Footer: React.FC = () => {
-    return (
-        <footer className="footer">
-            <div
-                className="footer-top"
-                style={{ backgroundImage: "url('./src/assets/footer-illustration.png')" }}>
-                <div className='container'>
-                    <div className="footer-brand">
+  return (
+    <footer className="footer">
+      <div className="footer-top" style={{ backgroundImage: "url('./src/assets/footer-illustration.png')" }}>
+        <div className="container">
+          <div className="footer-brand">
+            <a href="" className="logo">
+              Foodie<span className="span">.</span>
+            </a>
 
-                        <a href="" className="logo">Foodie<span className="span">.</span></a>
+            <p className="footer-text">
+              Financial experts support or help you to to find out which way you can raise your funds more.
+            </p>
 
-                        <p className="footer-text">
-                            Financial experts support or help you to to find out which way you can raise your funds more.
-                        </p>
-                        
-
-                        {/* <ul className="social-list"> */}
-{/* 
+            {/* <ul className="social-list"> */}
+            {/* 
                             <li>
                                 <a href="#" className="social-link">
                                     <div
@@ -30,7 +26,7 @@ const Footer: React.FC = () => {
                                 </a>
                             </li> */}
 
-                            {/* <li>
+            {/* <li>
                                 <a href="#" className="social-link">
                                     <img
                                         role="img"
@@ -40,7 +36,7 @@ const Footer: React.FC = () => {
                                 </a>
                             </li> */}
 
-                            {/* <li>
+            {/* <li>
                   <a href="#" class="social-link">
                     <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
                   </a>
@@ -52,14 +48,12 @@ const Footer: React.FC = () => {
                   </a>
                 </li> */}
 
-                        {/* </ul> */}
-
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    )
-}
+            {/* </ul> */}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

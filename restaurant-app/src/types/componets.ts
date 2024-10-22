@@ -1,8 +1,6 @@
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
 
 export interface ListItem {
-    icon?: ReactNode;
-    title: string
+  icon?: ReactNode;
+  title: string;
 }
-
-
