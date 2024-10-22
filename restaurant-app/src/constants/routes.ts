@@ -13,7 +13,7 @@ export const ROUTES: Route[] = [
   },
   {
     label: 'Shop',
-    path: '/#shop',
+    path: '/#food-menu',
     isHeader: true,
   },
   {
