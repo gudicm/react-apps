@@ -8,7 +8,7 @@ import ErrorBoundary from './components/Error/error';
 import About from './features/AboutUs';
 import Footer from './features/Footer';
 import Header from './features/Header';
-import Main from './features/Main';
+import Home from './features/Home';
 import Shop from './features/Shop';
 
 // Lazily load Button component
@@ -22,7 +22,7 @@ const App: React.FC = () => {
         <>
           <Header />
 
-          <Main />
+          <Home />
 
           <About />
 
