@@ -3,7 +3,6 @@ import React from "react";
 import { ListItem } from "../../types/componets";
 
 
-
 type ListProps = {
     items: ListItem[]
     itemClassName?: string,
@@ -20,8 +19,6 @@ const List: React.FC<ListProps> = ({
                 {item.icon}
                 <span className={itemTitleClassName}>{item.title}</span>
             </li>)}
-            {/* <li>
-            </li>  */}
         </ul>
     ) : null
 }

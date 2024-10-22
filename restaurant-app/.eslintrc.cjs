@@ -5,16 +5,7 @@ module.exports = {
     es2021: true,
   },
   parser: '@typescript-eslint/parser', // Use TypeScript parser
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended', // TypeScript rules
-    'plugin:react-hooks/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript', // Import rules for TypeScript
-    'prettier', // Prettier integration
-  ],
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:import/errors', 'plugin:import/warnings', 'plugin:import/typescript', 'prettier', 'plugin:storybook/recommended'],
   settings: {
     react: {
       version: 'detect',
