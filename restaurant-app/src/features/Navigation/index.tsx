@@ -8,13 +8,15 @@ type NavigationProps = {
     classNameList?: string
     classNameItem?: string
     classNameLink?: string
+    onClickItem?: () => void
 };
 const Navigation: React.FC<NavigationProps> = ({
     routes,
     classNameNav = 'navbar',
     classNameList = 'navbar-list',
     classNameItem = 'nav-item',
-    classNameLink = 'navbar-link'
+    classNameLink = 'navbar-link',
+    onClickItem
 }) => {
     return (
         <nav className={classNameNav} data-navbar="">
@@ -23,7 +25,16 @@ const Navigation: React.FC<NavigationProps> = ({
                 .filter((route) => route.isHeader)
                 .map((route) => (
                     <li key={route.path} className={classNameItem}>
-                        <a href={route.path} className={classNameLink} data-nav-link="">
+                        <a 
+                            href={route.path} 
+                            className={classNameLink} 
+                            data-nav-link=""
+                            onClick={() => {
+                                if (onClickItem) {
+                                  onClickItem();
+                                }
+                              }}
+                              >
                             {route.label}
                         </a>
                     </li>
