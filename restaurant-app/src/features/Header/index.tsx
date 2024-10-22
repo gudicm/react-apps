@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Button from '../../components/Button';
-import { routes } from '../../constants/routes';
+import { ROUTES } from '../../constants/routes';
 import Navigation from '../Navigation';
 
 const Header: React.FC = () => {
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
                     </h1>
 
                     <Navigation
-                        routes={routes}
+                        routes={ROUTES}
                     />
 
 

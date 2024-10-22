@@ -1,6 +1,6 @@
 import { Route } from '../types/constants';
 
-export const routes: Route[] = [
+export const ROUTES: Route[] = [
     {
         label: 'Home',
         path: '/',

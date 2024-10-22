@@ -3,6 +3,10 @@ import React from 'react';
 
 import Image from '../../components/Image';
 import CheckedIcon from '../Ionic/Checked';
+import { ABOUT_LIST_ITEMS } from '../../constants/general';
+import Button from '../../components/Button';
+
+
 
 
 
@@ -45,12 +49,19 @@ const About: React.FC = () => {
                     </p>
 
                     <ul className="about-list">
-                        <li className="about-item">
-                            <CheckedIcon/>
-                            <span className="span">Delicious &amp; Healthy Foods</span>
+                        {ABOUT_LIST_ITEMS.map((item, index) => (
+                            <li key={index} className="about-item">
+                                <CheckedIcon />
+                                <span className="span">{item}</span>
+                            </li>
+                        ))}
 
-                        </li>
                     </ul>
+                     
+                    <Button
+                    className='btn btn-hover'
+                    text='Order Now'
+                    />
                 </div>
 
             </div>
