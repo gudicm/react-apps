@@ -22,8 +22,8 @@ export const ROUTES: Route[] = [
     isHeader: false,
   },
   {
-    label: 'Contact Us',
-    path: '/contact',
-    isHeader: false,
+    label: 'Contact',
+    path: '/#footer',
+    isHeader: true,
   },
 ];

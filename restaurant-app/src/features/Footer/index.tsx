@@ -1,8 +1,28 @@
 import React from 'react';
 
+import { LinkItem } from '../../types/features';
+import FacebookLogo from '../Svgs/FacebookLogo';
+import InstagramLogo from '../Svgs/InstagramLogo';
+import PinterestLogo from '../Svgs/PinTestLogo';
+
+const sociaIcons: LinkItem[] = [
+  {
+    component: <FacebookLogo />,
+    link: 'https://www.facebook.com/',
+  },
+  {
+    component: <InstagramLogo />,
+    link: 'https://www.instagram.com/',
+  },
+  {
+    component: <PinterestLogo />,
+    link: 'https://www.pinterest.com/',
+  },
+];
+
 const Footer: React.FC = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="footer-top" style={{ backgroundImage: "url('./src/assets/footer-illustration.png')" }}>
         <div className="container">
           <div className="footer-brand">
@@ -14,42 +34,17 @@ const Footer: React.FC = () => {
               Financial experts support or help you to to find out which way you can raise your funds more.
             </p>
 
-            {/* <ul className="social-list"> */}
-            {/* 
-                            <li>
-                                <a href="#" className="social-link">
-                                    <div
-                                        className="md hydrated"
-                                        aria-label="logo facebook">
-                                        <FacebookLogo />
-                                    </div>
-                                </a>
-                            </li> */}
-
-            {/* <li>
-                                <a href="#" className="social-link">
-                                    <img
-                                        role="img"
-                                        className="md hydrated"
-                                        aria-label="logo twitter">
-                                    </img>
-                                </a>
-                            </li> */}
-
-            {/* <li>
-                  <a href="#" class="social-link">
-                    <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+            <ul className="social-list">
+              {sociaIcons.map((el, index) => (
+                <li key={index}>
+                  <a href={el.link} className="social-link">
+                    {el.component}
                   </a>
                 </li>
-
-                <li>
-                  <a href="#" class="social-link">
-                    <ion-icon name="logo-pinterest" role="img" class="md hydrated" aria-label="logo pinterest"></ion-icon>
-                  </a>
-                </li> */}
-
-            {/* </ul> */}
+              ))}
+            </ul>
           </div>
+
         </div>
       </div>
     </footer>
