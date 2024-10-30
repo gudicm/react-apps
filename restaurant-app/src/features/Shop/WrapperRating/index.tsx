@@ -1,6 +1,7 @@
 import { IonIcon } from '@ionic/react';
 import React from "react";
 
+
 const WrapperRating: React.FC = () => {
     return (
         <div className="rating-wrapper">
