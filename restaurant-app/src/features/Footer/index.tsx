@@ -1,24 +1,7 @@
 import React from 'react';
 
-import { LinkItem } from '../../types/features';
-import FacebookLogo from '../Svgs/FacebookLogo';
-import InstagramLogo from '../Svgs/InstagramLogo';
-import PinterestLogo from '../Svgs/PinTestLogo';
-
-const sociaIcons: LinkItem[] = [
-  {
-    component: <FacebookLogo />,
-    link: 'https://www.facebook.com/',
-  },
-  {
-    component: <InstagramLogo />,
-    link: 'https://www.instagram.com/',
-  },
-  {
-    component: <PinterestLogo />,
-    link: 'https://www.pinterest.com/',
-  },
-];
+import { SOCIAL_ICONS } from '../../constants/components';
+import SocialLinks from '../SocialLinks';
 
 const Footer: React.FC = () => {
   return (
@@ -34,17 +17,19 @@ const Footer: React.FC = () => {
               Financial experts support or help you to to find out which way you can raise your funds more.
             </p>
 
-            <ul className="social-list">
-              {sociaIcons.map((el, index) => (
-                <li key={index}>
-                  <a href={el.link} className="social-link">
-                    {el.component}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <SocialLinks items={SOCIAL_ICONS} />
           </div>
-
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <div className="container">
+          <p className="copyright-text">
+            © 2022
+            <a href="#" className="copyright-link">
+              codewithsadee
+            </a>{' '}
+            All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>

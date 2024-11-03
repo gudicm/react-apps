@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ListItem } from '../../types/componets';
+import { ListItem } from '../../types/components';
 
 type ListProps = {
   items: ListItem[];

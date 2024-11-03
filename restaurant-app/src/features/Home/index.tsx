@@ -5,7 +5,6 @@ import Image from '../../components/Image';
 
 const Home: React.FC = () => {
   return (
-
     <article>
       {/* hero section */}
       <section className="hero" id="home" style={{ backgroundImage: "url('./src/assets/hero-bg.jpg')" }}>
@@ -13,9 +12,7 @@ const Home: React.FC = () => {
           <div className="hero-content">
             <p className="hero-subtitle">Eat Sleep And</p>
             <h2 className="h1 hero-title">Supper delicious Burger in town!</h2>
-            <p className="hero-text">
-              Food is any substance consumed to provide nutritional support for an organism.
-            </p>
+            <p className="hero-text">Food is any substance consumed to provide nutritional support for an organism.</p>
 
             {/* <button className="btn">Book A Table</button> */}
             <Button text="Book A Table" className="btn" />
@@ -34,7 +31,6 @@ const Home: React.FC = () => {
         </div>
       </section>
     </article>
-
   );
 };
 export default Home;

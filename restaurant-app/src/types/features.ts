@@ -1,5 +1,4 @@
 export interface LinkItem {
-    component: React.ReactNode;
-    link: string
+  component: React.ReactNode;
+  link: string;
 }
-

@@ -1,8 +1,6 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
-import { ListItem } from '../../types/componets';
-
 import List from './index';
 
 export default {

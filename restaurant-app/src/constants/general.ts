@@ -1,4 +1,3 @@
-
 export const ABOUT_LIST_ITEMS: string[] = [
   'Delicious & Healthy Foods',
   'Fastest Delivery',
@@ -8,11 +7,4 @@ export const ABOUT_LIST_ITEMS: string[] = [
 
 export const MENU_SCREEN_WIDTH_TOGGLE = 990;
 
-export const SHOP_FILTER_LIST: string[] = [
-  'All',
-  'Pizza',
-  'Burger',
-  'Drinks',
-  'Sandwich',
-];
-
+export const SHOP_FILTER_LIST: string[] = ['All', 'Pizza', 'Burger', 'Drinks', 'Sandwich'];
