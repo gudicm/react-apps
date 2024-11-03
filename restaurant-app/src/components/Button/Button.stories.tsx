@@ -5,6 +5,7 @@ import Button from './index';
 
 import './../../index.css';
 
+
 export default {
   title: 'Components/Button',
   component: Button,
@@ -19,12 +20,14 @@ Default.args = {
 
 export const WithCustomClass = Template.bind({});
 WithCustomClass.args = {
-  text: 'Custom Class',
-  className: 'custom-button-class',
+  text: 'Reservation',
+  className: 'btn btn-hover',
 };
 
 export const WithChildren = Template.bind({});
 WithChildren.args = {
+  text: 'Reservation',
+  className: 'btn btn-hover',
   children: <span>Child Element</span>,
 };
 
@@ -34,10 +37,3 @@ WithClickHandler.args = {
   onClick: () => alert('Custom click handler!'),
 };
 
-export const WithChildrenHandler = Template.bind({});
-WithChildrenHandler.args = {
-  className: 'nav-toggle-btn',
-  text: 'Foo',
-  children: <span className="line top"></span>,
-  onClick: () => alert('Custom click handler!'),
-};
