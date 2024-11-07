@@ -5,18 +5,21 @@ import './index.css';
 interface ButtonProps {
   text?: string;
   className?: string;
+  children?: React.ReactNode;
   onClick?: () => void;
 }
 const Button: React.FC<ButtonProps> = ({
   text,
-  className,
+  className = 'button',
+  children,
   onClick = () => {
     alert('Button clicked!');
   },
 }) => {
   return (
-    <button className={className || ''} onClick={onClick}>
+    <button className={className} onClick={onClick}>
       {text}
+      {children}
     </button>
   );
 };
