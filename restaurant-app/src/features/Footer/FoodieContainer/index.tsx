@@ -6,7 +6,6 @@ import SocialLinks from '../../SocialLinks';
 const FoodieContainer: React.FC = () => {
   return (
     <>
-      <div style={{ display: 'none' }} dangerouslySetInnerHTML={{ __html: `<!-- Foodie section -->` }} />
       <div className="footer-brand">
         <a href="" className="logo">
           Foodie<span className="span">.</span>
@@ -18,7 +17,6 @@ const FoodieContainer: React.FC = () => {
 
         <SocialLinks items={SOCIAL_ICONS} />
       </div>
-      <div style={{ display: 'none' }} dangerouslySetInnerHTML={{ __html: `<!-- End Foodie section -->` }} />
     </>
   );
 };
