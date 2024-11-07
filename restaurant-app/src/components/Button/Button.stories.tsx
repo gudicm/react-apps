@@ -5,7 +5,6 @@ import Button from './index';
 
 import './../../index.css';
 
-
 export default {
   title: 'Components/Button',
   component: Button,
@@ -36,4 +35,3 @@ WithClickHandler.args = {
   text: 'Click Handler',
   onClick: () => alert('Custom click handler!'),
 };
-
