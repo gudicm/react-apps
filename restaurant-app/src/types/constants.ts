@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import { ComponentType } from 'react';
 
 export interface Route {
   label: string;
   path: string;
-  component?: FC;
+  component?: ComponentType<any>;
   isHeader: boolean;
 }

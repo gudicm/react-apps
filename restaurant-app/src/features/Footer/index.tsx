@@ -6,7 +6,9 @@ import HtmlComment from '../../components/HtmlComment';
 const Footer: React.FC = () => {
   return (
     <footer className="footer" id="footer">
-      <TopFooter />
+      <TopFooter
+        isFull={false}
+      />
 
       <HtmlComment comment="Footer bottom section" />
       <div className="footer-bottom">

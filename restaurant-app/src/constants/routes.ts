@@ -1,4 +1,5 @@
-import About from '../features/AboutUs';
+
+import Blog from '../features/Blog';
 import TopFooter from '../features/Footer/Top';
 import { Route } from '../types/constants';
 
@@ -21,11 +22,13 @@ export const ROUTES: Route[] = [
   {
     label: 'Blog',
     path: '/blog',
-    isHeader: false,
+    isHeader: true,
+    component:Blog
   },
   {
     label: 'Contact',
-    path: '/#footer',
+    path: '/footer',
     isHeader: true,
+    component: TopFooter
   }
 ];

@@ -5,10 +5,17 @@ import List from '../../../components/List';
 import { CONTACT_INFO, OPENING_HOURS } from '../../../constants/components';
 import FoodieContainer from '../FoodieContainer';
 
-const TopFooter: React.FC = () => {
+interface TopFooterProps {
+  isFull?: boolean;
+}
+const TopFooter: React.FC<TopFooterProps> = ({
+    isFull = true,
+  }
+) => {
   return (
     <div className="footer-top" style={{ backgroundImage: "url('./src/assets/footer-illustration.png')" }}>
-      <div className="container">
+      <div className={isFull ? 'container full-viewport' : 'container'}>
+      
         <HtmlComment comment="Foodie section" />
         <FoodieContainer />
         <HtmlComment comment="Foodie section end" />
