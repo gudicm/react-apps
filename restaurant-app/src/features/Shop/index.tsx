@@ -15,7 +15,7 @@ const Shop: React.FC = () => {
 
         <p className="section-text">Food is any substance consumed to provide nutritional support for an organism.</p>
 
-        <ul className="fiter-list">
+        <ul className="filter-list">
           {SHOP_FILTER_LIST.map((item, index) => (
             <li key={index}>
               <button className="filter-btn  active">{item}</button>

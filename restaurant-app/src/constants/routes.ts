@@ -1,3 +1,5 @@
+import About from '../features/AboutUs';
+import TopFooter from '../features/Footer/Top';
 import { Route } from '../types/constants';
 
 export const ROUTES: Route[] = [
@@ -25,5 +27,5 @@ export const ROUTES: Route[] = [
     label: 'Contact',
     path: '/#footer',
     isHeader: true,
-  },
+  }
 ];
